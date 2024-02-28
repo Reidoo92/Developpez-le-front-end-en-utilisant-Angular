@@ -36,6 +36,28 @@
   }
 }
 
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #04838f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #04838f98;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
 @media (max-width: 600px) {
   .stats-container {
     flex-direction: column;
@@ -46,6 +68,11 @@
     width: 80%;
     margin-bottom: 10px;
   }
+
+  .back-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 601px) {
@@ -55,5 +82,10 @@
 
   .stat-item {
     width: auto;
+  }
+
+  .back-button {
+    padding: 10px 18px;
+    font-size: 16px;
   }
 }

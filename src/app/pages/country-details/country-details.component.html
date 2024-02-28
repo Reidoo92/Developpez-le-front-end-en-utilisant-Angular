@@ -1,0 +1,20 @@
+<div class="title">
+  <h2>{{ countryName }}</h2>
+
+</div>
+<div *ngIf="countryStats" class="stats-container">
+  <div class="stat-item">
+    <label>Number of entries</label>
+    <div>{{ countryStats.totalParticipations }}</div>
+  </div>
+  <div class="stat-item">
+    <label>Total number medals</label>
+    <div>{{ countryStats.totalMedals }}</div>
+  </div>
+  <div class="stat-item">
+    <label>Total number of athletes</label>
+    <div>{{ countryStats.totalAthletes }}</div>
+  </div>
+</div>
+<app-line-chart></app-line-chart>
+<button (click)="goBack()" class="back-button">Back</button>
