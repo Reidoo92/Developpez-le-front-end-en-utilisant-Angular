@@ -68,13 +68,6 @@ export class OlympicService {
       })
     );
   }
-
-  getCountryDetails(countryId: number): Observable<OlympicCountry | undefined> {
-    return this.olympics$.pipe(
-      map(countries => countries.find(country => country.id === countryId))
-    );
-  }
-
   getMedalsByParticipation(countryName: string): Observable<{ year: number; medalsCount: number }[]> {
     return this.olympics$.pipe(
       map((countries) => {
